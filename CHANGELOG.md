@@ -225,7 +225,7 @@ Visualization
     - Threshold tool. Changes display colors of pixels above and/or below a certain threshold based on an attribute table. This tool can be accessed from the animation management form.
 
 
-# New applications
+## New applications
 
   - MapListCondense: Condenses a map list into a smaller map list, i.e. aggregates maps into one map according to a step size and specific aggregation rules.
   - MapListExpand: Expands the map list and creates intermediate maps based on certain interpolation rules, i.e. the reverse of MapListCondense.
@@ -236,7 +236,7 @@ Visualization
   - TableCreateTimeColumn: Creates a time column in a table. The time column is derived from a map list based on a (user-defined) pattern in the name of the map list.
 
 
-# General
+## General
 
   - Map list and Object collection can have an attribute table. Each record matches the corresponding index in the list/collection.
   - The Operation list has been extended to include a "finder" which filters the list.
