@@ -1,23 +1,3 @@
-## Description
-
-### Standardized, web-based upload and download of sensor data and sensor metadata
-
-**The 52°North Sensor Observation Service (SOS) provides an interoperable web-based interface for inserting and querying sensor data and sensor descriptions. It aggregates observations from live in-situ sensors as well as historical data sets (time series data).**
-
-The 52°North SOS is a reference implementation of the
-[OGC Sensor Observation Service specification (version 2.0)](https://portal.opengeospatial.org/files/?artifact_id=47599), an interoperable interface for publishing and querying sensor data and metadata. 
-It was implemented during the [OGC Web Services Testbed,  Phase 9 (OWS-9)](http://www.ogcnetwork.net/ows-9) 
-and tested to be compliant to this specification within the [OGC CITE testing](http://cite.opengeospatial.org/test_engine) in December of 2012.
-
-The 52°North SOS enables the user to:
-
- - insert and retrieve georeferenced observation data
- - access georeferenced measurement data in a standardized format (ISO/OGC Observation and Measurement - O&M 2.0, OGC WaterML 2.0)
- - insert and retrieve sensor descriptions (encoded according to the OGC SensorML standard - SML 1.0.1, SML 2.0)
- - publish measurement data (near real-time, as well as archived data) 
-
-
-
 # ILWIS 3.8.5
 
 ## Changes
