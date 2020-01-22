@@ -1,3 +1,75 @@
+# ILWIS 3.8.6
+
+## Changes
+The following features were added/restored:
+- Restored the on-screen digitizer (create and edit point map, create and edit segment map)
+- Restored the MapView functionality (the composition of several layers can be stored as a MapView, in order to be re-opened at a later time)
+- Added support for grid-like georeferences with thousands of control points; for now, such a georeference can only be imported from external data
+- Added Triple Collocation application
+- The mouse wheel now zooms in / out the MapWindow; if the previous behavior is required, this can be set in the ILWIS Preferences
+
+## Bug fixes
+
+- Revision of the annotations to make them work correctly: grid, graticule, class legend, value legend, map border, scale bar, north arrow, whitespace tool
+- Revised the Georeference Tiepoints editor
+- Revised the Hovmoller, Track Profile and Cross Section tools
+- Revised the animations and the Animation Management tool
+- Improved robustness and correctness of CSV file importing
+- A maplist can now be exported as multiband GeoTiff, ERDAS or ENVI format
+- Added a spatial index to speed up selection in feature maps (segments, polygons)
+- Added light options to 3D Extrusion
+- In 3D view, objects are no longer disappearing when zooming in too much
+- In 3D view, polygons no longer blend with each other when they are too near
+- Restored the 3D cursor in the 3D Stack tool
+- In 3D view, when zooming close, the rotation point changes to the viewpoint instead of the gravity center, which makes navigation easier
+- Pixel size of submap georefs of latlonwgs84 maps is now expressed in degrees (previously in meters)
+- Many consistency improvements in the Create GeoReference forms
+- Pixelinfo can now be re-opened after it is closed
+- Now it is possible to change the line style for polygon boundaries and for segment maps
+- Restored the 3D self-height option in Maplist animation
+- GDAL-Importing a single file with a single layer no longer results in an object collection
+- Added "Lambert Conformal Conic 1972", "Lambert Conformal Conic 2008" and "Lambert Conformal Conic 1SP"
+- Now opening a MapList that is inside an ObjectCollection works
+- Enabled coloring Bool layers (previously the defaults could never be changed)
+- Importing data where the source and destination folders differ from the current catalog now works
+- When the display attribute of a pointmap/segmentmap/polygonmap is set to a column that has undefineds, now the undefined objects are hidden
+- In 3D view, after setting a map to use 3D-heights, it is now possible to set it back to "None"
+- Table import is now protected against duplicate column names
+- Added North Arrow
+- Export via GDAL (e.g. GTiff) in a folder with spaces now works properly
+- The DEM hydro processing functions are now able to work with raster images larger than 6000x6000 pixels, without giving "Out of Memory" errors
+- Edit->Copy on a MapWindow with a Legend now also copies the legend-texts
+- Added support for Edit->Copy on a MapWindow containing a Space Time Cube and related elements (Space Time Path, Stations, 3D Windrose and Flocks)
+- Choosing "black" as the symbol color for single colored maps now makes the symbols black instead of transparent
+- The order of the SEBS applications menu is now the working order, instead of alphabetic
+- The Table to Pointmap operation now gives correct values to the output map
+- Solved occasionally showing '*' instead of the projected coordinates in the statusbar of the MapWindow
+- In WMS/OSM services, added support for tiles with color palette, support for https, and support for additional request parameters
+- The WMS/OSM tiles now connect seamlessly, if the available OpenGL version is at least 1.2
+- Revised the Iso-lines application; now all contour levels are generated, and the "intervals" option works
+- Solved: fonts (labels, annotations, space time cube axes and coordinates) did not display correctly on some graphics cards, looking transparent
+- Viewing a classmap or a class attribute and turning classes on/off through the representation legend now works properly
+- Revised the polygon to raster and the raster to polygon applications
+- Solved: The Unique ID application was forgetting the first point
+- The grid on curved images (using a tiepoint georeference set to "Full Second Order") is now drawn "curved"
+- Graticule spacing is now expressed in Degrees, Minutes, Seconds (instead of Decimal Degrees)
+- MapCalc now also works with images that are more than 32768 pixels wide; the limit is increased to 2 billion pixels wide(!)
+- Added the Random Colors option to the possible color schemes for class maps
+- Added option "Break Dependencies" on a "Dependent" Georeference like SubMap, which will replace it with a standalone Georeference Corners when possible
+- Restored the ilwis.exe option –CR <command> to start ILWIS in hidden-mainwindow mode; to start it without a command, the option is "–CR hide"; this is different than the -C option which will execute the command and close ILWIS
+- Value images with very few values (e.g. 2 values) will now display with the correct colors
+- SegmentMapGlue is now able to correctly glue segment maps that have different coordinate systems
+- Importing tiff files with data type "unsigned integer" now works correctly (the range is 0-65535 instead of 0-32767)
+- Operations "Iso Lines", "Voronoi" and "Point to Segment" are now properly categorized in the Right-mouse-button menu
+- Wildcards are now allowed in command "crmaplist", for easier creation of maplists on the command-line
+- It is now possible to use an attribute of domain "Color" to color a layer
+- The Aggregate Maplist application is now also able to work with large maplists (previously it crashed after a certain threshold)
+- Re-added the operations MapKrigingSimple, MapKrigingOrdinary, MapKrigingAnisotropic and MapKrigingUniversal
+- The export of Color images into GeoTiff via the ILWIS export method is made faster
+- The default color for single colored maps can now be set in the ILWIS Preferences
+- Added more representations for value maps
+- Many other minor bugs and glitches are solved
+
 # ILWIS 3.8.5
 
 ## Changes
